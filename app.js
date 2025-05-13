@@ -14,7 +14,9 @@ app.use(cors());
 app.use(express.json());
 
 const client = createThirdwebClient({
-secretKey: "6Ef...2h1",
+  secretKey: process.env.THIRDWEB_SECRET_KEY,
+});
+
 });
 const contract = getContract({
   address: "0x9Fc9b00d0D2988825cfA7B01E5dd2F726b172821",
